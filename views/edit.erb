@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>account_book</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div class="card col-lg-6 mx-auto mt-5">
+        <div class="card-body">
+            <h1>編集ページ</h1>
+            <form action="/renew/<%= @item.id %>" method="post">
+                <div class="form-group">
+                    <label for="title">内容</label>
+                    <input type="text" name="title" value="<%= @item.title %>" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="price">金額</label>
+                    <input type="text" name="price" value="<%= @item.price%>" class="form-control">
+                </div>
+                
+                <input type="submit" value="編集完了" class="btn btn-dark float-right">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
